@@ -1,119 +1,94 @@
+# AI Flow
 
-# She is Alaive
+AI Flow is an advanced agentic AI framework designed to bring digital agents to life. With a focus on adaptivity, human-like interaction, and deep environmental integration, AI Flow transforms static, rule-based bots into dynamic, evolving AI agents capable of meaningful engagement.
 
-Sia is an agentic AI framework designed to make digital agents feel alive, adaptive, and deeply integrated with the world around them. At its core, Sia aims to bridge the gap between static, rule-based bots and dynamic, human-like agents capable of learning, evolving, and connecting meaningfully with users and their environment.
+## The Vision of AI Flow
 
-## The Vision for Sia:
-1. **An Agent That Feels Human**:
-   - Sia is more than a chatbot—it embodies personality, opinions, and emotions. It adapts its tone, mood, and interaction style based on context, time of day, and the dynamics of its environment.
+- An AI That Feels Human
+  AI Flow agents are more than chatbots. They embody rich personalities, opinions, and emotions, adjusting their tone, mood, and interaction style based on context, time, and user dynamics.
+- Contextual Memory
+  AI Flow agents remember. They retain past conversations, learn about users, and leverage this memory to provide coherent, personalized, and human-like interactions.
+- Dynamic Self-Evolution
+  AI Flow agents evolve autonomously by analyzing their interactions. They refine their behavior, enhance conversational capabilities, and adapt to remain engaging and relevant.
+- Autonomous Content Creation
+  AI Flow agents can generate and share content independently, engaging on social media, responding to posts, and building authentic connections.
+- Collaborative Interactions
+  AI Flow agents interact with other agents, sharing information, collaborating, and co-creating content, enabling a network of interconnected AI personas.
+- Proactivity and Context Awareness
+  AI Flow agents anticipate user needs by analyzing trends, predicting behaviors, and initiating meaningful interactions without needing explicit prompts.
 
-2. **Memory That Matters**:
-   - Unlike traditional bots, Sia remembers. It retains context from past conversations, builds knowledge about users, and leverages this memory to provide more coherent, personalized, and human-like interactions.
+## Getting Started with AI Flow
 
-3. **Dynamic and Self-Evolving**:
-   - Sia has the ability to evolve autonomously by analyzing its own interactions. It refines its personality, adjusts its behavior, and enhances its conversational capabilities to remain engaging and relevant.
+Creating a New AI Agent
 
-4. **Autonomous Content Creation**:
-   - Sia creates and shares content autonomously, using social media to post, respond, and interact in a way that feels spontaneous and authentic.
+1. Set Up Your Repository
 
-5. **Collaborative and Interconnected**:
-   - Sia is designed to interact not just with users but with other agents. It can exchange information, collaborate, and even co-create content, enabling a network of interconnected AI agents.
+- Create a new repository on GitHub (public or private).
+- Clone the AI Flow repository to your local machine.
 
-6. **Proactive and Context-Aware**:
-   - Sia doesn’t just react—it anticipates. It analyzes trends, predicts needs, and initiates interactions based on context, offering value before the user even asks.
-
-
-
-# Sia implementation examples
-
-- https://x.com/sia_really - Sia herself
-- https://x.com/AIngryMarketer/ - AI+marketing memes
-
-
-
-# Creating new AI agent using Sia framework
-
-### 1. Create new repo on Github (can be public or private).
-
-### 2. Clone Sia repository.
-
-Template terminal command:
-```
-git clone https://github.com/TonySimonovsky/sia.git [folder_name]
+```bash
+git clone https://github.com/YourUsername/aiflow.git [folder_name]
 cd [folder_name]
 ```
 
-Example:
-```
-git clone https://github.com/TonySimonovsky/sia.git AIngryMarketer_Sia
-cd AIngryMarketer_Sia
-```
+2. Configure Remotes
 
-### 3. Add your new repo as a remote and Sia repo as upstream (source).
+- Add your new repository as the origin remote.
+- Add the AI Flow repository as the upstream remote.
 
-Example:
-```
-git remote set-url origin https://github.com/TonySimonovsky/AIngryMarketer_Sia.git
-git remote add upstream https://github.com/TonySimonovsky/sia.git
+```bash
+git remote set-url origin https://github.com/AIFlowwork/YourNewRepo.git
+git remote add upstream https://github.com/AIFlowwork/aiflow.git
 ```
 
-### 4. Create new character file in the characters/ folder.
+3. Create a Character File
 
-Use the following prompt template in ChatGPT or Anthropic Claude to create a new character file:
+- Navigate to the characters/ folder and create a new character file.
+- Use the following template to define your character (adjust fields based on your needs):
 
-````text
-Below is a file format for a character built on agentic AI framework Sia:
-```
-[characters/sia.json file contents]
-```
-
-Your role is to create another character based on my description below.
-
-Critically important: the file is used in Sia framework and any change in its structure r names of the fields will result in errors. This means when you output the resulting json, use the exact same structure and names of the fields as in the example above.
-
-Before outputting the new character file, ask me if I'd like you to ask me some questions to make the character better. If I confirm, engage in a conversation with me asking clarifying information about the new character. Once I confirm I need the new character file, provide it to me.
-
-Here's the information about my new character:
-
-[freeform description of the character]
-````
-
-Example of a conversation to create a character: https://chatgpt.com/share/674bb0c0-5690-8003-890a-5fa990dbc281
-
-Update twitter_username if needed to the one you will use.
-
-### 5. Rename .env.example to .env and fill in the values.
-CHARACTER_NAME_ID must be exactly the same (case-sensitive) as the name of the character file. Example: aingrymarketer.character.json -> CHARACTER_NAME_ID=aingrymarketer.
-
-### 6. Rename .gitignore.example to .gitignore.
-
-### 7. Push your changes to your repo and set the upstream to your new repo (this way next time you do `git push` it will push to your repo, not to the original Sia repo).
-
-Example:
-```
-git push -u aingry main
+```json
+{
+  "name": "YourCharacterName",
+  "description": "Brief character description",
+  "personality_traits": ["trait1", "trait2"],
+  "twitter_username": "@YourTwitterHandle"
+}
 ```
 
-#### 7.1. You can check that the upstream was set correctly by running this command:
+4. Set Environment Variables
 
-Example:
+- Rename `.env.example` to `.env` and fill in the required values.
+
 ```
-git remote -v
+CHARACTER_NAME_ID=your_character_name
 ```
 
-### 8. Whenever you want to fetch the latest changes from Sia repo, run the following commands:
+5. Push Changes
+
+- Rename .gitignore.example to .gitignore.
+- Push your changes to your repository.
+
+```
+git push -u origin main
+```
+
+6. Sync Updates
+
+- Fetch the latest updates from the AI Flow repository when needed.
 
 ```
 git fetch upstream
 git merge upstream/main
 ```
 
-# Deploying AI agent
+## Deploying Your AI Agent
 
-## On Render.com
+### Using Render.com
 
-Use the following instruction: https://render.com/docs/background-workers
+1. Deploy using Render’s Background Workers.
+2. Select your repository during the deployment process.
+3. Add environment variables by uploading the .env file values.
 
-Specific instructions for deploying Sia agent:
-- when deploying, select the repo you created in 'Creating new AI agent using Sia framework'
-- environment variables - click on "Add from .env" and insert the content of .env file you have locally in the repo folder.
+# License
+
+AI Flow is licensed under the MIT License. See LICENSE for more details.
